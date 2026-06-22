@@ -7,13 +7,13 @@ x_min, x_max = -8.0, 8.0
 N = 1000
 
 x = np.linspace(x_min, x_max, N)   
-h = x[1] - x[0]                     # grid spacing
+h = x[1] - x[0]                     # doing some grid spacing here
 
 
 
 def V(x):
     return 0.5 * x**2               # harmonic oscillator t: E_n = (n + 0.5)x**2
-    # return 0.5*x**2 + 0.1*x**4   # anharmonic (no exact answer — computer only)
+    # return 0.5*x**2 + 0.1*x**4   # anharmonic (we have no exact answer — computer only)
     # return (x**2 - 2.0)**2        # double well (quantum tunneling happens here)
     
 
@@ -29,6 +29,8 @@ def V(x):
 # Written as a matrix, H is tridiagonal cause the second derivative at grid point i only involves the neighboring points i-1 and i+1
 #   diagonal entry [i,i]   = 1/h² + V(x[i])
 #   off-diagonal   [i,i±1] = -1/(2h²)
+
+
 
 main_diagonal = 1.0/h**2 + V(x)              # length N
 off_diagonal  = -0.5/h**2 * np.ones(N - 1)   # length N-1
