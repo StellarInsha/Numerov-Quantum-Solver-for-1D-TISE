@@ -39,7 +39,7 @@ Handing this matrix to `numpy`. It returns all eigenvalues (energies) and eigenv
 
 ## Why This Works
 
-Think of the wavefunction as a vector — N numbers, one per grid point. The Hamiltonian tells you how each point is connected to its neighbours through the kinetic energy, and how each point is shifted by the local potential. Solving Hψ = Eψ means finding the special vectors that H stretches without rotating. Those are the eigenvectors. Their stretch factors are the eigenvalues (the allowed energies)
+We can think of the wavefunction as a vector consisting of N numbers, one per grid point. The Hamiltonian tells you how each point is connected to its neighbours through the kinetic energy, and how each point is shifted by the local potential. Solving Hψ = Eψ means finding the special vectors that H stretches without rotating. Those are the eigenvectors. Their stretch factors are the eigenvalues (the allowed energies)
 
 This is identical in spirit to what Griffiths does analytically with ladder operators for the harmonic oscillator. The difference is that the analytical method exploits a specific algebraic property of V = ½x² that most potentials do not have. The matrix method exploits nothing special about V at all. It works universally.
 
